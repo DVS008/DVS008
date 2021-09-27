@@ -1,6 +1,6 @@
 - 👋 Hi, I’m @DVS008
-- 👀 I’m interested in Frontend Development
-- 🌱 I’m currently learning Design
+- 👀 I’m interested in Design 
+- 🌱 I’m currently learning Frontend Development
 - 📫 reach me - dattavarma8@gmail.com
 
 <!---
