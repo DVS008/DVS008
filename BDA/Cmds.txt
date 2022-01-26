@@ -1,0 +1,47 @@
+Guidelines to run a basic map reduce program
+
+Create a 3 node hadoop cluster using Dataproc.
+Write your map reduce program using java, convert it into a jar file and upload it to the dataproc cluster.
+Create a directory in HDFS (hadoop distributed file system) and upload your dataset into the directory.
+Run the map reduce program on the dataset using the jar file.
+Get the generated output files from hdfs and download the files.
+
+Some useful commands and links
+                                       
+Link to download hadoop core jar file       
+https://mvnrepository.com/artifact/org.apache.hadoop/hadoop-core/1.2.1
+Compile java file to produce class files         
+javac -classpath hadoop-core-1.2.1.jar -d somefolder Frequency.java
+Generate jar file from class files
+jar -cvf Frequency.jar -C somefolder/ .
+List all the contents in a directory          
+ls <path>
+Make a directory in hdfs
+hdfs dfs -mkdir /datafolder/
+Put a file from local hadoop file system to hdfs 
+hdfs dfs -put dataset.txt /datafolder/
+List all the contents of a directory which is in hdfs
+hdfs dfs -ls <path>
+Hadoop command to run map reduce program
+hadoop jar <jarfile path> <package.classname> <dataset path> <output path> 
+Example command to run inbuilt word count program
+hadoop jar /usr/lib/hadoop-mapreduce/hadoop-mapreduce-examples.jar wordcount /datafolder/ /tmp/result/
+Get a file from hdfs to local hadoop file system
+hdfs dfs -get /tmp/result* /tmp/result .
+Inbuilt hadoop jar files
+ls /usr/lib/hadoop-mapreduce/
+Get the present working directory path
+pwd
+Change directory
+cd <path>
+Upload a file from remote location using url
+wget <url> 
+Upload a file from your computer to hadoop local file system or download a file from hadoop local file system
+Click options in right top corner of ssh terminal -> upload or download file
+cmd to run
+ hadoop jar Frequency.jar hadoop.Frequency /datafolder/ /tmp/result/ 
+hdfs dfs -get /tmp/result* /tmp/result .
+
+
+
+
