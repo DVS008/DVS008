@@ -1,6 +1,6 @@
 - 👋 Hi, I’m @DVS008
-- 👀 I’m interested in Design 
-- 🌱 I’m currently learning Frontend Development
+- 👀 I’m Interested in Full Stack Development
+- 🌱 I'm currently working as Node JS Developer
 - 📫 reach me - dattavarma8@gmail.com
 
 <!---
